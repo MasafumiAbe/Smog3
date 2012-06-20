@@ -1,26 +1,16 @@
-/*=============================================================
- * Copyright(C) 2012 Masafumi Abe. All Rights Reserved.
- *
- * ------------------------------------------------------------
- * Song3
- *
- * ------------------------------------------------------------
- * 2012/01/28    Masafumi Abe        V‹Kì¬
- *
-===============================================================*/
 package sample.smog3.form.top;
 
 import org.smog3.form.Form;
 
 /**
- * Top‰æ–Ê‰Šúƒy[ƒW—pForm
+ * Topï¿½ï¿½ï¿½Êï¿½ï¿½ï¿½ï¿½yï¿½[ï¿½Wï¿½pForm
  * 
  * @author abemasafumi
  * 
  */
 public class IndexForm extends Form {
 
-    /** ƒVƒŠƒAƒ‹ƒo[ƒWƒ‡ƒ“ */
+    /** ï¿½Vï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½oï¿½[ï¿½Wï¿½ï¿½ï¿½ï¿½ */
     private static final long serialVersionUID = -697833928731738479L;
 
 }

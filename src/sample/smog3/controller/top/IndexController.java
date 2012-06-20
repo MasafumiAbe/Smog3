@@ -1,13 +1,3 @@
-/*=============================================================
- * Copyright(C) 2012 Masafumi Abe. All Rights Reserved.
- *
- * ------------------------------------------------------------
- * Song3
- *
- * ------------------------------------------------------------
- * 2012/01/28    Masafumi Abe        V‹Kì¬
- *
-===============================================================*/
 package sample.smog3.controller.top;
 
 import org.smog3.annotation.Form;
@@ -16,7 +6,7 @@ import sample.smog3.bean.Parameters;
 import sample.smog3.common.controller.Controller;
 
 /**
- * Top‰æ–Ê‰Šúƒy[ƒW
+ * Topï¿½ï¿½ï¿½Êï¿½ï¿½ï¿½ï¿½yï¿½[ï¿½W
  * 
  * @author abemasafumi
  * 

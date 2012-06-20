@@ -5,7 +5,7 @@
  * Smog3
  *
  * ------------------------------------------------------------
- * 2012/01/28    Masafumi Abe        V‹Kì¬
+ * 2012/01/28    Masafumi Abe        ï¿½Vï¿½Kï¿½ì¬
  *
 ===============================================================*/
 package org.smog3.controller;
@@ -36,36 +36,36 @@ public abstract class Controller extends org.slim3.controller.Controller {
     @Override
     protected final Navigation run() throws Exception {
 
-        // ƒtƒH[ƒ€ì¬
+        // ï¿½tï¿½Hï¿½[ï¿½ï¿½ï¿½ì¬
         Form form = null;
-        // ƒAƒmƒe[ƒVƒ‡ƒ“‚©‚çƒtƒH[ƒ€–¼‚Ìæ“¾
+        // ï¿½Aï¿½mï¿½eï¿½[ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½tï¿½Hï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½Ìæ“¾
         String value =
             this
                 .getClass()
                 .getAnnotation(org.smog3.annotation.Form.class)
                 .value();
 
-        // ƒtƒH[ƒ€‚Ìw’è‚ª‚ ‚ê‚Î
+        // ï¿½tï¿½Hï¿½[ï¿½ï¿½ï¿½Ìwï¿½è‚ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         if (value != null && value.length() != 0) {
-            // ƒpƒbƒP[ƒW–¼‚Ìæ“¾
+            // ï¿½pï¿½bï¿½Pï¿½[ï¿½Wï¿½ï¿½ï¿½Ìæ“¾
             String pack = this.getClass().getPackage().getName();
             String[] packs = pack.split(Const.PACKAGE_CONTROLLER);
-            // ƒtƒH[ƒ€ƒpƒbƒP[ƒWì¬
+            // ï¿½tï¿½Hï¿½[ï¿½ï¿½ï¿½pï¿½bï¿½Pï¿½[ï¿½Wï¿½ì¬
             pack = packs[0] + Const.PACKAGE_FORM + packs[1] + ".";
 
-            // ƒNƒ‰ƒX–¼‚©‚çClass‚ğæ“¾
+            // ï¿½Nï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Classï¿½ï¿½ï¿½æ“¾
             Class c = Class.forName(pack + value);
 
             if (c != null) {
-                // ƒtƒH[ƒ€ƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒXæ“¾
+                // ï¿½tï¿½Hï¿½[ï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½Xï¿½ÌƒCï¿½ï¿½ï¿½Xï¿½^ï¿½ï¿½ï¿½Xï¿½æ“¾
                 form = (Form) c.newInstance();
             }
         }
 
         if (form != null) {
-            // ƒtƒH[ƒ€‰Šú‰»
+            // ï¿½tï¿½Hï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             validate(form);
-            // validate ƒƒ\ƒbƒh‚ÌÀs
+            // validate ï¿½ï¿½ï¿½\ï¿½bï¿½hï¿½Ìï¿½ï¿½s
             if (errors == null) {
                 errors = new Errors();
             }
@@ -76,10 +76,10 @@ public abstract class Controller extends org.slim3.controller.Controller {
         request.setAttribute(Const.ERROR_MESSAGE, errors == null
             ? new Errors()
             : errors);
-        // ƒwƒbƒ_[‚©‚çƒRƒ“ƒeƒLƒXƒgƒpƒX‚ğæ“¾
+        // ï¿½wï¿½bï¿½_ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½Rï¿½ï¿½ï¿½eï¿½Lï¿½Xï¿½gï¿½pï¿½Xï¿½ï¿½ï¿½æ“¾
         request.setAttribute("contextPath", request.getHeader("HOST"));
 
-        // ‰ºˆÊƒNƒ‰ƒX‚Ìƒƒ\ƒbƒhÀs
+        // ï¿½ï¿½ï¿½ÊƒNï¿½ï¿½ï¿½Xï¿½Ìƒï¿½ï¿½\ï¿½bï¿½hï¿½ï¿½ï¿½s
         String path = run(form);
 
         Navigation nav = path != null ? forward(path) : null;
@@ -87,7 +87,7 @@ public abstract class Controller extends org.slim3.controller.Controller {
     }
 
     /**
-     * Validate parameters specified by annotation</br> ƒAƒmƒe[ƒVƒ‡ƒ“w’è‚ª‚ ‚é•Ï”‚Ìƒ`ƒFƒbƒN
+     * Validate parameters specified by annotation</br> ï¿½Aï¿½mï¿½eï¿½[ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½wï¿½è‚ªï¿½ï¿½ï¿½ï¿½ï¿½Ïï¿½ï¿½Ìƒ`ï¿½Fï¿½bï¿½N
      * 
      * @param form
      *            Form class instance
@@ -95,7 +95,7 @@ public abstract class Controller extends org.slim3.controller.Controller {
     private void validate(Form form) {
         Validators v = new Validators(request);
 
-        // •Ï”‚Ìæ“¾
+        // ï¿½Ïï¿½ï¿½Ìæ“¾
         Field[] fields = form.getClass().getDeclaredFields();
         List<AbstractValidator> validators = new ArrayList<AbstractValidator>();
 
@@ -121,10 +121,10 @@ public abstract class Controller extends org.slim3.controller.Controller {
         }
 
         if (v.validate()) {
-            // form‚Ö‘ã“ü
+            // formï¿½Ö‘ï¿½ï¿½ï¿½
             BeanUtil.copy(request, form);
         } else {
-            // ƒGƒ‰[‚Ìæ“¾
+            // ï¿½Gï¿½ï¿½ï¿½[ï¿½Ìæ“¾
             errors = v.getErrors();
         }
     }
@@ -138,23 +138,23 @@ public abstract class Controller extends org.slim3.controller.Controller {
      */
     private AbstractValidator checkValidatorType(Validators v, String type) {
 
-        if (type == Type.NUMBER) {
+        if (type.equals(Type.NUMBER)) {
             return v.numberType("###");
-        } else if (type == Type.BYTE) {
+        } else if (type.equals(Type.BYTE)) {
             return v.byteType();
-        } else if (type == Type.SHORT) {
+        } else if (type.equals(Type.SHORT)) {
             return v.shortType();
-        } else if (type == Type.INTEGER) {
+        } else if (type.equals(Type.INTEGER)) {
             return v.integerType();
-        } else if (type == Type.LONG) {
+        } else if (type.equals(Type.LONG)) {
             return v.longType();
-        } else if (type == Type.FLOAT) {
+        } else if (type.equals(Type.FLOAT)) {
             return v.floatType();
-        } else if (type == Type.DOUBLE) {
+        } else if (type.equals(Type.DOUBLE)) {
             return v.doubleType();
-        } else if (type == Type.STRING) {
+        } else if (type.equals(Type.STRING)) {
             return null;
-        } else if (type == Type.CHARACTER) {
+        } else if (type.equals(Type.CHARACTER)) {
             return null;
         }
 

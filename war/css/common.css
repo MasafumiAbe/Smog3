@@ -1,0 +1,82 @@
+@CHARSET "utf-8";
+
+body {
+	background-color: #ebf6f7;
+}
+
+div#errorMessage{
+	color: #ff0000;
+}
+
+#layout {
+	background-color:#ffffff;
+	width: 50%;
+	margin : auto;
+	text-align: center;
+	padding: 10px;
+}
+
+table {
+	margin: auto;
+}
+
+td {
+	text-align: right;
+}
+ul li {
+	display: block;
+	list-style-type : none;
+}
+
+/* ボタン */
+input#btn {
+	widht : 100px;
+	height : 40px;
+	margin : 5px;
+	padding : 8px;
+	border: 3px solid #fff;
+	color : #fff;
+	font-size : 15px;
+	text-decoration: none;
+	background-color: orange;
+
+	-webkit-border-radius : .8em;
+	-moz-border-radius : .8em;
+	border-radius : .8em;
+
+	-moz-box-shadow : 0 0 5px rgba(0, 0, 0, .5);
+	-webkit-box-shadow : 0 0 5px rgba(0, 0, 0, .5);
+	box-shadow : 0 0 5px rgba(0, 0, 0, .5);
+}
+
+/* ボタンホバー */
+input#btn:HOVER {
+	-webkit-box-shadow : 0 0 8px rgba(0, 0, 0, .8);
+	-moz-box-shadow : 0 0 8px rgba(0, 0, 0, .8);
+	box-shadow : 0 0 8px rgba(0, 0, 0, .8);
+}
+
+ul li a#button{
+	widht : 200px;
+	padding : 8px;
+	border: 3px solid #fff;
+	color : #fff;
+	font-size : 24px;
+	text-align: center;
+	text-decoration: none;
+	background-color: orange;
+
+	-webkit-border-radius : .8em;
+	-moz-border-radius : .8em;
+	border-radius : .8em;
+
+	-moz-box-shadow : 0 0 5px rgba(0, 0, 0, .5);
+	-webkit-box-shadow : 0 0 5px rgba(0, 0, 0, .5);
+	box-shadow : 0 0 5px rgba(0, 0, 0, .5);
+}
+
+ul li a#button:hover {
+	-webkit-box-shadow : 0 0 8px rgba(0, 0, 0, .8);
+	-moz-box-shadow : 0 0 8px rgba(0, 0, 0, .8);
+	box-shadow : 0 0 8px rgba(0, 0, 0, .8);
+}

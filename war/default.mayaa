@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<m:mayaa xmlns:m="http://mayaa.seasar.org">
+
+	<m:beforeRender><![CDATA[
+		// var contextPath = request.getContextPath();
+		var contextPath = request.getAttribute("contextPath")
+		var println = function(value) {
+			if (value != null) {
+				java.lang.System.out.println(value);
+			} else {
+				java.lang.System.out.println(new String(value));
+			}
+		};
+
+		load("debug.mjs");
+		var errorMessage = request.getAttribute(Packages.jp.msfm.gae.slim3.common.Const.ERROR_MESSAGE);
+	]]></m:beforeRender>
+
+	<m:write id="currentTime" value="${ new java.util.Date().toString() }" />
+
+	<m:echo m:id="errorMessage">
+		<!-- <m:forEach items="${errorMessage}" var="e">
+			<m:element name="p">
+				<m:write value="${e}" />
+			</m:element>
+		</m:forEach>
+		 -->
+		 <m:for init="${var i = 0}" test="${i &lt; errorMessage.size()}" after="">
+			<m:element name="p">
+				<m:write value="${errorMessage.get(i)}" />
+			</m:element>
+		 </m:for>
+	</m:echo>
+
+	<!--
+	<m:echo m:id="ssl">
+		<m:attribute name="action" value="https://${contextPath}${action}" />
+	</m:echo>
+	 -->
+
+</m:mayaa>

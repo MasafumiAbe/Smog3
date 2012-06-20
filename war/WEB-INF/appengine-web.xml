@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+	<application></application>
+	<version>1</version>
+
+	<precompilation-enabled>true</precompilation-enabled>
+
+	<system-properties>
+	    <property name="slim3.hotReloading" value="true"/>
+	    <!--
+        <property name="slim3.datastoreDeadline" value="8"/>
+        <property name="slim3.uploadSizeMax" value="1000000"/>
+        <property name="slim3.uploadFileSizeMax" value="100000"/>
+        -->
+	    <property name="java.util.logging.config.file" value="WEB-INF/classes/logging.properties"/>
+		<property name="org.seasar.mayaa.secure.web" value="true"/>
+	</system-properties>
+
+	<static-files>
+        <include path="**.css" />
+        <include path="**.js" />
+        <include path="**.png" />
+        <include path="**.gif" />
+        <include path="/docs/**" />
+        <exclude path="**.html" />
+    </static-files>
+
+	<resource-files>
+		<include path="**.html" />
+		<include path="**.mayaa" />
+		<include path="**.mjs" />
+	</resource-files>
+
+
+	<sessions-enabled>false</sessions-enabled>
+	<threadsafe>true</threadsafe>
+</appengine-web-app>
